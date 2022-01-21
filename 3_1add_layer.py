@@ -1,4 +1,3 @@
-from unicodedata import name
 import tensorflow._api.v2.compat.v1 as tf#加上这两句才能在tensorflow2.x运行1.x
 tf.disable_v2_behavior()
 import numpy as np
@@ -70,7 +69,7 @@ def main()->np.void:
 
     #网络搭建好了，开始训练
     _,ax = plt.subplots(1,1,figsize=(8,6))
-    # plt.ion()#本次运行请注释，全局运行不要注释
+    plt.ion()#本次运行请注释，全局运行不要注释
     
 
     for i in range(100):
